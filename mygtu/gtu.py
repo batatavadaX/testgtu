@@ -11,7 +11,7 @@ class logic:
         branch = "IC",
         year = "FIRST_YEAR",
         url = "https://www.gtu.ac.in/uploads/",
-        path = "downloads/subject_code.json",
+        path = "database/subject_code.json",
         course = "BE",
         extension = ".pdf"
     ):
