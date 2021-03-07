@@ -15,6 +15,7 @@ setuptools.setup(
     url="https://github.com/batatavadaX/testgtu",
     license="MIT",
     packages=setuptools.find_packages(),
+        install_requires=['datetime', 'pytz', 'ujson'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
