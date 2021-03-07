@@ -3,9 +3,8 @@ import pytz
 import ujson
 import itertools
 from datetime import datetime
-from pathlib import Path
 
-DIR = Path(__file__).parent.resolve()
+O_O = os.path.join(os.path.dirname(os.path.abspath(__file__)),'database/subject_code.json'))
 
 class logic:
     def __init__(
@@ -13,7 +12,7 @@ class logic:
         branch = "IC",
         year = "FIRST_YEAR",
         url = "https://www.gtu.ac.in/uploads/",
-        path = (DIR / 'database/subject_code.json')
+        path = O_O
         course = "BE",
         extension = ".pdf"
     ):
