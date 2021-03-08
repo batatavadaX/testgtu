@@ -12,10 +12,6 @@ async def download(urls):
 
     if not os.path.exists(PATH):
         os.mkdir(PATH)
-        print("creating {PATH}")
-    else:
-        print("found path {PATH}")
-
     for url in urls:
         path = PATH + url.split("/uploads/")[1].replace("/", "-")
         start = datetime.now()
