@@ -7,23 +7,26 @@ from .utils.time import time
 from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
-async def download(urls):
+class downloader():
+
+    async def download(urls):
 
 
-    if not os.path.exists(PATH):
-        os.mkdir(PATH)
-    for url in urls:
-        path = PATH + url.split("/uploads/")[1].replace("/", "-")
-        start = datetime.now()
-        async with aiohttp.request("GET", url) as response:
-            read = await response.read()
+        if not os.path.exists(PATH):
+            os.mkdir(PATH)
+        for url in urls:
+            path = PATH + url.split("/uploads/")[1].replace("/", "-")
+            start = datetime.now()
+            async with aiohttp.request("GET", url) as response:
+                read = await response.read()
+                await asyncio.sleep(2)
+            async with aiofiles.open(path, 'wb') as f:
+                await f.write(read)
+            await f.close()
             await asyncio.sleep(2)
-        async with aiofiles.open(path, 'wb') as f:
-            await f.write(read)
-        await f.close()
-        await asyncio.sleep(2)
-        end = datetime.now()
-        fin = (end - start)
+            end = datetime.now()
+            fin = (end - start)
+
         le_n = len(urls)
         info = f'''
         {__logo__}
