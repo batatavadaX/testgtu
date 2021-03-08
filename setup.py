@@ -6,7 +6,7 @@ with open("README.md", "r") as setup:
 
 setuptools.setup(
     name="mygtu",
-    version="0.1.11",
+    version="0.1.15",
     author="g",
     author_email="k",
     description="g",
