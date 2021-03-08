@@ -1,7 +1,9 @@
 # testgtu
 lmao
 
+use gtu-z branch
 
+gtu-y is deprected
 you can use an userbot and run
 
 default values set to ic first year
