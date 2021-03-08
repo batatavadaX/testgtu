@@ -9,7 +9,7 @@ from pathlib import Path
 
 DIR = Path(__file__).parent.resolve()
 
-class logic:
+class mad:
     def __init__(
         self,
         *,
