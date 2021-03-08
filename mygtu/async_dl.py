@@ -4,7 +4,7 @@ import aiofiles
 import os
 from datetime import datetime 
 from .utils import time
-from .utils.profile import __logo__, __info__, __version__, __time__
+from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
 class downloader():
