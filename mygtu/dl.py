@@ -21,7 +21,7 @@ async def download(urls):
         end = datetime.now()
         fin = (end - start)
         le_n = len(urls)
-        retun fin
+        return fin
     return le_n
 
 # le_n = len(urls)   
