@@ -6,7 +6,7 @@ class time:
     def current(
         str: zone='Asia/Kolkata', 
         str: strf='%Y'
-    )-> int: 
+    ) -> int: 
         return datetime.now( 
             pytz.timezone( 
                 zone 
