@@ -4,6 +4,7 @@ import ujson
 import itertools
 from datetime import datetime
 from pathlib import Path
+from .utils import time
 
 DIR = Path(__file__).parent.resolve()
 
@@ -25,14 +26,10 @@ class logic:
         self.extension = list(extension)
 
     @staticmethod
-    def current(zone="Asia/Kolkata"):
-        return datetime.now(pytz.timezone(zone)).strftime("%Y")
-
-    @staticmethod
     def year():
         new = []
         for i in range(1, 4):
-            new.append(int(logic.current()) - i)
+            new.append(int(time.current) - i)
         return new
 
     def database(self):
