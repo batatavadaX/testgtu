@@ -5,5 +5,3 @@ async def k():
     db = gf.database()
     urls = gf.gather_url(db)
     await dl.download(urls)
-
-await k()
