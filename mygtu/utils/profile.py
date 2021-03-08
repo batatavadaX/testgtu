@@ -1,10 +1,5 @@
 __version__ = '0.1.9'
 __info__ = 'following software publish under MIT License
             [t.me/midnightmadwalk]'
-__logo__ = f"  __  __        ____ _         
-              |  \/  |_   _ / ___| |_ _   _ 
-              | |\/| | | | | |  _| __| | | |
-              | |  | | |_| | |_| | |_| |_| |
-              |_|  |_|\__, |\____|\__|\__,_|
-                      |___/ "          
+__logo__ = 'MyGtu'        
   
