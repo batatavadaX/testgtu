@@ -4,7 +4,7 @@ lmao
 build success
 test failing
 
-you can use a userbot and run
+you can use an userbot and run
 
 ```py
 from mygtu import dl, logic
