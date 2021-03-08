@@ -18,14 +18,12 @@ class logic:
         url :str = "https://www.gtu.ac.in/uploads/",
         path :str = (DIR / 'database/subject_code.json'),
         course :str = "BE",
-        extension :list = [".pdf"]
     ) -> None:
         self._branch = branch
         self._year = year
         self._course = course
         self._uri = url
         self._path = path
-        self._extension = extension
         
     
     def database(self):
@@ -53,7 +51,7 @@ class logic:
         self, 
         db: Optional[str] = None,
     ):
-        op = self._extension
+        op = [".pdf"]
         db = self.database()
         x = self.fetch_uri()
         z = list(itertools.product(x,db))
