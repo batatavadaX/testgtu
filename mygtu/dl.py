@@ -7,11 +7,12 @@ from .utils.time import time
 from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
-async def download(urls):
+if not os.path.exists(PATH):
+  os.mkdir(PATH)
 
-    if not os.path.exists(PATH):
-        os.mkdir(PATH)
+async def download(urls):
     for url in urls:
+
         path = PATH + url.split("/uploads/")[1].replace("/", "-")
         start = datetime.now()
         async with aiohttp.request("GET", url) as response:
