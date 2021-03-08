@@ -10,7 +10,7 @@ from .utils.constants import PATH
 gf = logic()
 
 class downloader():
-    def __init__():
+    def __init__(*):
         if not os.path.exists(PATH):
             os.mkdir(PATH)
     
