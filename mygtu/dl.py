@@ -3,7 +3,7 @@ import aiohttp
 import aiofiles
 import os
 from datetime import datetime 
-from .utils.time import current 
+from .utils.time import time
 from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
