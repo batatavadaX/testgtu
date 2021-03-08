@@ -1,5 +1,5 @@
 from .time.time import current
-class 
+class ylist():
     @staticmethod
     def year() -> list:
         new = []
