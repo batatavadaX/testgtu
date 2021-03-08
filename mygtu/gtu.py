@@ -18,7 +18,7 @@ class logic:
         url :str = "https://www.gtu.ac.in/uploads/",
         path :str = (DIR / 'database/subject_code.json'),
         course :str = "BE",
-        extension :list = ".pdf"
+        extension :list = [".pdf"]
     ) -> None:
         self._branch = branch
         self._year = year
