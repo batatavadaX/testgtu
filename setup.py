@@ -12,10 +12,11 @@ setuptools.setup(
     description="g",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    include_package_data=True,
     url="https://github.com/batatavadaX/testgtu",
     license="MIT",
     packages=setuptools.find_packages(),
-    data_files=[('mygtu', ['mygtu/database/*.json'])], 
+    # data_files=[('mygtu', ['mygtu/database/*.json'])], 
     install_requires=['datetime', 'pytz', 'ujson'],
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -23,5 +24,4 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    include_package_data=True,
 )
