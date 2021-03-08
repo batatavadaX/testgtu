@@ -3,7 +3,7 @@
 you can use an userbot and run
 
 ```py
-pip3 install https://github.com/batatavadaX@gtu-z
+pip3 install --no-cache git+https://github.com/batatavadaX/testgtu@gtu-z
 ```
 
 default values set to ic first year
