@@ -1,5 +1,5 @@
 from .gtu import mad
-from .dl import downloader
-
 gf = mad()
+
+from .dl import downloader
 dl = downloader()
