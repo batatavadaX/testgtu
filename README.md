@@ -16,6 +16,7 @@ await dl.download(urls)
 
 you can pass values
 
+(this examples are for all ready running loops check test.py)
 ```py
 from mygtu import dl, mad
 gf = mad(
