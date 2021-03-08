@@ -12,10 +12,10 @@ setuptools.setup(
     description="g",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    include_package_data=True,
     url="https://github.com/batatavadaX/testgtu",
     license="MIT",
     packages=setuptools.find_packages(),
+    include_package_data=True,
     # data_files=[('mygtu', ['mygtu/database/*.json'])], 
     install_requires=['datetime', 'pytz', 'ujson'],
     classifiers=[
