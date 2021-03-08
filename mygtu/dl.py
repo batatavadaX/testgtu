@@ -19,14 +19,16 @@ async def download(urls):
         await f.close()
         await asyncio.sleep(2)
         end = datetime.now()
+        fin = (end - start)
         le_n = len(urls)
-        return le_n
+        retun fin
+    return le_n
 
 # le_n = len(urls)   
 info = f'''
 {profile.__logo__}
 Total Files : {le_n}\n
-Total Time : [{(le_n * (end - start))}]\n
+Total Time : [{(le_n * fin)}]\n
 Path : {PATH}\n
 info : {profile.__info__}\n
 version: {profile.__version__}\n
