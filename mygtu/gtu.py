@@ -53,7 +53,7 @@ class logic:
         self, 
         db: Optional[str] = None,
     ):
-        op = self.extension
+        op = self._extension
         db = self.database()
         x = self.fetch_uri()
         z = list(itertools.product(x,db))
