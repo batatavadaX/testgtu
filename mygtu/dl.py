@@ -26,7 +26,7 @@ async def download(urls):
         end = datetime.now()
         fin = (end - start)
         le_n = len(urls)
-        [print("downloading", i, f"of {le_n}") for i in range(1, le_n+1)]
+    [print("downloading", i, f"of {le_n}") for i in range(1, le_n+1)]
         
     info = f'''
     {__logo__}
