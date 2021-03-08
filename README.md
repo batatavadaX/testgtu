@@ -2,6 +2,10 @@
 
 you can use an userbot and run
 
+```py
+pip3 install https://github.com/batatavadaX@gtu-z
+```
+
 default values set to ic first year
 
 ```py
