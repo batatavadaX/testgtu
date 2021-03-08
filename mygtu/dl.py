@@ -41,5 +41,3 @@ async def download(urls):
         with open(PATH+"info.txt", "w") as w:
             w.write(info)
         w.close()
-
-print(f"downloading files in {PATH}")
