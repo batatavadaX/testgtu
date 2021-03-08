@@ -4,7 +4,6 @@ import ujson
 import itertools
 from datetime import datetime
 from .utils import y_list
-from .utils.constants import DIR
 from pathlib import Path
 
 DIR = Path(__file__).parent.resolve()
