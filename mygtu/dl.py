@@ -28,7 +28,7 @@ Total Time : [{(le_n * (end - start))}]\n
 Path : {PATH}\n
 info : {profile.__info__}\n
 version: {profile.__version__}\n
-[{time.current(strf="%m/%d/%Y, %H:%M:%S"}]
+[{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
 '''
 with open(PATH+"info.txt", "w") as w:
     w.write(info)
