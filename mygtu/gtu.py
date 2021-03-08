@@ -50,7 +50,7 @@ class logic:
         self, 
         db: Optional[str] = None,
     ):
-        op = ['.pdf']
+        op = self.extension
         db = self.database()
         x = self.fetch_uri()
         z = list(itertools.product(x,db))
