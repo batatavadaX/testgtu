@@ -15,6 +15,7 @@ setuptools.setup(
     url="https://github.com/batatavadaX/testgtu",
     license="MIT",
     packages=setuptools.find_packages(),
+    data_files=[('mygtu', ['mygtu/database/subject_code.json.json'])], 
     install_requires=['datetime', 'pytz', 'ujson'],
     classifiers=[
         "Programming Language :: Python :: 3",
