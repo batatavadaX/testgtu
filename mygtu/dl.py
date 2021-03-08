@@ -27,17 +27,17 @@ class downloader():
             end = datetime.now()
             fin = (end - start)
 
-        le_n = len(urls)
-        info = f'''
-        {__logo__}
-        Total Files : {le_n} 
-        Total Time : [{(le_n * fin)}]
-        Path : {PATH}
-        info : {__info__}
-        version: {__version__}
-        [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
-        '''
-        with open(PATH+"info.txt", "w") as w:
-            w.write(info)
-        w.close()
-        print("downloaded")
+    le_n = len(urls)
+    info = f'''
+    {__logo__}
+    Total Files : {le_n} 
+    Total Time : [{(le_n * fin)}]
+    Path : {PATH}
+    info : {__info__}
+    version: {__version__}
+    [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
+    '''
+    with open(PATH+"info.txt", "w") as w:
+        w.write(info)
+    w.close()
+    print("downloaded")
