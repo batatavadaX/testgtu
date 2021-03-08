@@ -1,7 +1,7 @@
 from mygtu import dl, logic
 
-gf = logic()
-
-db = gf.database("downloads/k.json")
-urls = gf.gather_url(db)
-await dl.download(urls)
+async def k():
+    gf = logic()
+    db = gf.database("downloads/k.json")
+    urls = gf.gather_url(db)
+    await dl.download(urls)
