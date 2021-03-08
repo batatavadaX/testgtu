@@ -3,56 +3,53 @@ import pytz
 import ujson
 import itertools
 from datetime import datetime
-from pathlib import Path
-from .utils import time
+from .utils import y_list
+from .utils.constants import DIR
 
-DIR = Path(__file__).parent.resolve()
 
 class logic:
     def __init__(
         self,
-        branch = "IC",
-        year = "FIRST_YEAR",
-        url = "https://www.gtu.ac.in/uploads/",
-        path = (DIR / 'database/subject_code.json'),
-        course = "BE",
-        extension = ".pdf"
-    ):
-        self.branch = str(branch)
-        self.year = str(year)
-        self.course = str(course)
-        self.uri = str(url)
-        self.path = str(path)
-        self.extension = list(extension)
-
-    @staticmethod
-    def year():
-        new = []
-        for i in range(1, 4):
-            new.append(int(time.current()) - i)
-        return new
-
+        *,
+        branch :str = "IC",
+        year :str = "FIRST_YEAR",
+        url :str = "https://www.gtu.ac.in/uploads/",
+        path :str = (DIR / 'database/subject_code.json'),
+        course :str = "BE",
+        extension :list = ".pdf"
+    ) -> None:
+        self._branch = branch
+        self._year = year
+        self._course = course
+        self._uri = url
+        self._path = path
+        self._extension = extension
+        
+    
     def database(self):
-        k = open(self.path, "r")
-        data = ujson.load(k)
+        with open(self.path, "r") as k:
+            data = ujson.load(k)
         return data[f"{self.branch}"][f"{self.year}"]
-
+     
     def fetch_uri(self):
         base = self.uri
         course = self.course
-        a = logic.year()[0]
-        b = logic.year()[1]
-        c = logic.year()[2]
+        a = y_list[0]
+        b = y_list[1]
+        c = y_list[2]
         fetch = [
             f"{base}S{a}/{course}",
             f"{base}S{b}/{course}", 
             f"{base}W{b}/{course}", 
             f"{base}W{c}/{course}"
         ]
-        return fetch
+        return fetch  
         
 
-    def gather_url(self, db):
+    def gather_url(
+        self, 
+        db: Optional[str] = None,
+    ):
         op = ['.pdf']
         db = self.database()
         x = self.fetch_uri()
@@ -60,4 +57,5 @@ class logic:
         p = list(["/".join(all) for all in z])
         q = list(itertools.product(p, op))
         return list(["".join(all) for all in q])
+    
     
