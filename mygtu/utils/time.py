@@ -3,10 +3,7 @@ import pytz
 
 class time:
     @staticmethod 
-    def current(
-        str: zone='Asia/Kolkata', 
-        str: strf='%Y'
-    ) -> int: 
+    def current(zone='Asia/Kolkata', strf='%Y') -> int: 
         return datetime.now( 
             pytz.timezone( 
                 zone 
