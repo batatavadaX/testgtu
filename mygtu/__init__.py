@@ -1,3 +1,3 @@
-from .gtu import logic
+from .gtu import mad
 
-gf = logic()
+gf = mad()
