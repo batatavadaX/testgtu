@@ -9,9 +9,6 @@ from .utils.constants import PATH
 
 
 async def download(urls):
-    with open(PATH + "info.txt", "w") as w:
-        w.write(f'''[{time.current(strf="%m/%d/%Y, %H:%M:%S")}]''')
-    w.close()
     print(f'''
           {__logo__}
           starting download...''')
@@ -29,7 +26,7 @@ async def download(urls):
         end = datetime.now()
         fin = (end - start)
         le_n = len(urls)
-        print("downloading...")
+        [print("downloading", i, f"of {len}") for i in range(10)]
         
     info = f'''
     {__logo__}
@@ -38,6 +35,7 @@ async def download(urls):
     Path : {PATH}
     info : {__info__}
     version: {__version__}
+    [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
     '''
     with open(PATH + "info.txt", "w") as w:
         w.write(info)
