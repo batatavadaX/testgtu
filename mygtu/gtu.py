@@ -29,7 +29,7 @@ class logic:
     def year():
         new = []
         for i in range(1, 4):
-            new.append(int(time.time.current()) - i)
+            new.append(int(time.current()) - i)
         return new
 
     def database(self):
