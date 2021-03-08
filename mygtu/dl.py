@@ -3,7 +3,7 @@ import aiohttp
 import aiofiles
 import os
 from datetime import datetime 
-from .utils import time
+from .utils.time import time
 from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
@@ -28,7 +28,7 @@ async def download(urls):
         Path : {PATH}\n
         info : {__info__}\n
         version: {__version__}\n
-        [{time.time.current(strf="%m/%d/%Y, %H:%M:%S")}]
+        [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
         '''
         with open(PATH+"info.txt", "w") as w:
             w.write(info)
