@@ -10,6 +10,7 @@ from pathlib import Path
 DIR = Path(__file__).parent.resolve()
 
 class mad:
+
     def __init__(
         self,
         *,
@@ -58,5 +59,4 @@ class mad:
         p = list(["/".join(all) for all in z])
         q = list(itertools.product(p, op))
         return list(["".join(all) for all in q])
-    
     
