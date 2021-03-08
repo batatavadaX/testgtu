@@ -7,11 +7,9 @@ from .utils.time import time
 from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
+
 class downloader():
-
-    async def download(urls):
-
-
+    async def download(urls, *):
         if not os.path.exists(PATH):
             os.mkdir(PATH)
         for url in urls:
