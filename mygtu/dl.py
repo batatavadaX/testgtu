@@ -2,13 +2,11 @@ import asyncio
 import aiohttp
 import aiofiles
 import os
-from datetime import datetime 
+from datetime import datetime
 from .utils.time import time
 from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
-if not os.path.exists(PATH):
-  os.mkdir(PATH)
 
 async def download(urls):
     for url in urls:
@@ -35,7 +33,7 @@ async def download(urls):
     version: {__version__}
     [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
     '''
-    with open(PATH+"info.txt", "w") as w:
+    with open(PATH + "info.txt", "w") as w:
         w.write(info)
     w.close()
     print("downloaded")
