@@ -4,7 +4,7 @@ import aiofiles
 import os
 from datetime import datetime 
 from .gtu import logic
-from .utils.profile import *
+from .utils.profile import __logo__, __info__, __version__
 from .utils.constants import PATH
 
 gf = logic()
@@ -33,8 +33,8 @@ class downloader():
         Total Files : {le_n}\n
         Total Time : [{(le_n * (end - start))}]\n
         Path : {PATH}\n
-        __author__ : {profile.__author__}\n
-        __version__ : {profile.__version__}\n
+        info : {profile.__info__}\n
+        version: {profile.__version__}\n
         [{gf.current(strf="%m/%d/%Y, %H:%M:%S")}]
         '''
         with open(
