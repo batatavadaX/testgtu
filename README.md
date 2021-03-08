@@ -18,7 +18,12 @@ you can pass values
 
 ```py
 from mygtu import dl, mad
-gf = mad(path="path/to_json.json")
+gf = mad(
+    path="path/to_json.json", 
+    branch="IC", 
+    year="FIRST_YEAR",
+    course="BE"
+    )
 db = gf.database()
 urls = mad.gather_url(db)
 await dl.download(urls)
