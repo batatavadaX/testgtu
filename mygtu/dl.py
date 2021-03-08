@@ -9,7 +9,6 @@ from .utils.constants import PATH
 
 async def download(urls):
 
-
     if not os.path.exists(PATH):
         os.mkdir(PATH)
     for url in urls:
