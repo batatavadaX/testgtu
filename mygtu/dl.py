@@ -9,7 +9,8 @@ from .utils.constants import PATH
 
 
 class downloader():
-    async def download(urls, *):
+    @staticmethod
+    async def download(urls):
         if not os.path.exists(PATH):
             os.mkdir(PATH)
         for url in urls:
