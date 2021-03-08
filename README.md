@@ -7,9 +7,7 @@ test failing
 you can use an userbot and run
 
 ```py
-from mygtu import dl, logic
-gf = logic()
-db = gf.database()
-urls = gf.gather_url(db)
+from mygtu import dl, mad
+urls = mad.gather_url()
 await dl.download(urls)
 ```
