@@ -26,12 +26,12 @@ async def download(urls):
 
 # le_n = len(urls)   
 info = f'''
-{profile.__logo__}
+{__logo__}
 Total Files : {le_n}\n
 Total Time : [{(le_n * fin)}]\n
 Path : {PATH}\n
-info : {profile.__info__}\n
-version: {profile.__version__}\n
+info : {__info__}\n
+version: {__version__}\n
 [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
 '''
 with open(PATH+"info.txt", "w") as w:
