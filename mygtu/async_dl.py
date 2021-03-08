@@ -3,14 +3,12 @@ import aiohttp
 import aiofiles
 import os
 from datetime import datetime 
-from .utils.profile import __logo__, __info__, __version__, time
+from .utils import time
+from .utils.profile import __logo__, __info__, __version__, __time__
 from .utils.constants import PATH
 
 class downloader():
-    def __init__():
-        if not os.path.exists(PATH):
-            os.mkdir(PATH)
-    
+    @staticmethod
     async def download(urls):
         for url in urls:
             path = PATH + url.split("/uploads/")[1].replace("/", "-")
@@ -32,7 +30,7 @@ class downloader():
         Path : {PATH}\n
         info : {profile.__info__}\n
         version: {profile.__version__}\n
-        [{utils.time}]
+        [{time.current(strf="%m/%d/%Y, %H:%M:%S"}]
         '''
         with open(
             PATH+"info.txt", "w") as w:
