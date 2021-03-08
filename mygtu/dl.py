@@ -23,9 +23,9 @@ async def download(urls):
         le_n = len(urls)
         info = f'''
         {__logo__}
-        Total Files : {le_n}\n
-        Total Time : [{(le_n * fin)}]\n
-        Path : {PATH}\n
+        Total Files : {le_n} 
+        Total Time : [{(le_n * fin)}]
+        Path : {PATH}
         info : {__info__}\n
         version: {__version__}\n
         [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
