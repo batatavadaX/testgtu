@@ -4,8 +4,8 @@ import aiofiles
 import os
 from datetime import datetime 
 from .gtu import logic
-from .profile import *
-from .constants import PATH
+from .utils.profile import *
+from .utils.constants import PATH
 
 gf = logic()
 
