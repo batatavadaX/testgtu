@@ -9,8 +9,14 @@ from .utils.constants import PATH
 
 
 async def download(urls):
+    with open(PATH + "info.txt", "w") as w:
+        w.write(f'''[{time.current(strf="%m/%d/%Y, %H:%M:%S")}]''')
+    w.close()
+    print(f'''
+          {__logo__}
+          starting download...''')
+          
     for url in urls:
-
         path = PATH + url.split("/uploads/")[1].replace("/", "-")
         start = datetime.now()
         async with aiohttp.request("GET", url) as response:
@@ -24,6 +30,7 @@ async def download(urls):
         fin = (end - start)
         le_n = len(urls)
         print("downloading...")
+        
     info = f'''
     {__logo__}
     Total Files : {le_n} 
@@ -31,9 +38,8 @@ async def download(urls):
     Path : {PATH}
     info : {__info__}
     version: {__version__}
-    [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
     '''
     with open(PATH + "info.txt", "w") as w:
         w.write(info)
     w.close()
-    print("downloaded")
+    print(info)
