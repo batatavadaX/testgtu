@@ -16,14 +16,14 @@ class logic:
         url = "https://www.gtu.ac.in/uploads/",
         path = (DIR / 'database/subject_code.json'),
         course = "BE",
-        extension = ".pdf"
+        exten_sion = ".pdf"
     ):
         self.branch = str(branch)
         self.year = str(year)
         self.course = str(course)
         self.uri = str(url)
         self.path = str(path)
-        self.extension = list(extension)
+        self.exte_nsion = list(exte_nsion)
 
     @staticmethod
     def year():
