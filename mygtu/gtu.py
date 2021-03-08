@@ -2,11 +2,11 @@ import os
 import pytz
 import ujson
 import itertools
+from typing import Optional
 from datetime import datetime
-from .utils import ylist
-from pathlib import Path
+from .utils import y_list
+from .utils.constants import DIR
 
-DIR = Path(__file__).parent.resolve()
 
 class logic:
     def __init__(
@@ -33,12 +33,11 @@ class logic:
         return data[f"{self._branch}"][f"{self._year}"]
      
     def fetch_uri(self):
-        y = ylist().y_list
         base = self._uri
         course = self._course
-        a = y[0]
-        b = y[1]
-        c = y[2]
+        a = y_list[0]
+        b = y_list[1]
+        c = y_list[2]
         fetch = [
             f"{base}S{a}/{course}",
             f"{base}S{b}/{course}", 
