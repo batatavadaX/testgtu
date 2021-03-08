@@ -21,20 +21,16 @@ async def download(urls):
         end = datetime.now()
         fin = (end - start)
         le_n = len(urls)
-        return fin
-    return le_n
-
-# le_n = len(urls)   
-info = f'''
-{__logo__}
-Total Files : {le_n}\n
-Total Time : [{(le_n * fin)}]\n
-Path : {PATH}\n
-info : {__info__}\n
-version: {__version__}\n
-[{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
-'''
-with open(PATH+"info.txt", "w") as w:
-    w.write(info)
-w.close()
-print(info)
+        info = f'''
+        {__logo__}
+        Total Files : {le_n}\n
+        Total Time : [{(le_n * fin)}]\n
+        Path : {PATH}\n
+        info : {__info__}\n
+        version: {__version__}\n
+        [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
+        '''
+        with open(PATH+"info.txt", "w") as w:
+            w.write(info)
+        w.close()
+        print(info)
