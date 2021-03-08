@@ -4,7 +4,7 @@ import ujson
 import itertools
 from typing import Optional
 from datetime import datetime
-from .utils import y_list
+from .utils import ylist
 from .utils.constants import DIR
 
 
@@ -33,11 +33,12 @@ class logic:
         return data[f"{self._branch}"][f"{self._year}"]
      
     def fetch_uri(self):
+        y = ylist.year()
         base = self._uri
         course = self._course
-        a = y_list[0]
-        b = y_list[1]
-        c = y_list[2]
+        a = y[0]
+        b = y[1]
+        c = y[2]
         fetch = [
             f"{base}S{a}/{course}",
             f"{base}S{b}/{course}", 
