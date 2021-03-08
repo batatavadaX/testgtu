@@ -27,13 +27,13 @@ class logic:
         
     
     def database(self):
-        with open(self.path, "r") as k:
+        with open(self._path, "r") as k:
             data = ujson.load(k)
-        return data[f"{self.branch}"][f"{self.year}"]
+        return data[f"{self._branch}"][f"{self._year}"]
      
     def fetch_uri(self):
-        base = self.uri
-        course = self.course
+        base = self._uri
+        course = self._course
         a = y_list[0]
         b = y_list[1]
         c = y_list[2]
