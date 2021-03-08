@@ -3,14 +3,11 @@ import aiohttp
 import aiofiles
 import os
 from datetime import datetime 
-from .gtu import logic
-from .utils.profile import __logo__, __info__, __version__
+from .utils.profile import __logo__, __info__, __version__, time
 from .utils.constants import PATH
 
-gf = logic()
-
 class downloader():
-    def __init__(*):
+    def __init__():
         if not os.path.exists(PATH):
             os.mkdir(PATH)
     
@@ -35,7 +32,7 @@ class downloader():
         Path : {PATH}\n
         info : {profile.__info__}\n
         version: {profile.__version__}\n
-        [{gf.current(strf="%m/%d/%Y, %H:%M:%S")}]
+        [{utils.time}]
         '''
         with open(
             PATH+"info.txt", "w") as w:
