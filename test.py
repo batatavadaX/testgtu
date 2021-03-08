@@ -1,8 +1,7 @@
-from mygtu import dl, mad
+from mygtu import dl, gf
 import asyncio
 
 async def main():
-    gf = mad(path="mygtu/database/subject_code.json")
     db = gf.database()
     urls = gf.gather_url(db)
     await dl.download(urls)
