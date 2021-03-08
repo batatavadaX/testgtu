@@ -38,7 +38,7 @@ async def download(urls):
     version: {__version__}
     [{time.current(strf="%m/%d/%Y, %H:%M:%S")}]
     '''
-     with open(PATH+"info.txt", "w") as w:
+    with open(PATH+"info.txt", "w") as w:
         w.write(info)
-     w.close()
-     print("downloaded")
+    w.close()
+    print("downloaded")
