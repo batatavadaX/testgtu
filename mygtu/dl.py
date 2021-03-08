@@ -23,7 +23,7 @@ async def download(urls):
         end = datetime.now()
         fin = (end - start)
         le_n = len(urls)
-    print("downloading...")
+        print("downloading...")
     info = f'''
     {__logo__}
     Total Files : {le_n} 
