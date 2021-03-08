@@ -25,10 +25,9 @@ async def download(urls):
         end = datetime.now()
         fin = (end - start)
         le_n = len(urls)
-        for i in range(1, le_n+1):
-            print(f"downloading {i} ...")
-        return
-
+        
+    for i in range(1, le_n+1):
+            print(f"downloading {i} ..")
     info = f'''
     {__logo__}
     Total Files : {le_n} 
