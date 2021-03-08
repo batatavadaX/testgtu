@@ -1,8 +1,8 @@
-from mygtu import dl, logic
+from mygtu import dl, mad
 import asyncio
 
 async def main():
-    gf = logic("testgtu/mygtu/database/subject_code.json")
+    gf = mad("testgtu/mygtu/database/subject_code.json")
     db = gf.database()
     urls = gf.gather_url(db)
     await dl.download(urls)
