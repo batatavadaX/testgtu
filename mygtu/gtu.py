@@ -5,7 +5,9 @@ import itertools
 from typing import Optional
 from datetime import datetime
 from .utils import ylist
+from pathlib import Path
 
+DIR = Path(__file__).parent.resolve()
 
 class logic:
     def __init__(
