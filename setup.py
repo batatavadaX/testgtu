@@ -17,7 +17,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     # data_files=[('mygtu', ['mygtu/database/*.json'])], 
-    install_requires=['datetime', 'pytz', 'ujson', 'aiofiles', 'aiohttp', 'uvloop'],
+    install_requires=['datetime', 'pytz', 'ujson', 'aiofiles', 'aiohttp'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
