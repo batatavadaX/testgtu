@@ -12,7 +12,7 @@ on average you can download
 pip3 install --no-cache git+https://github.com/batatavadaX/testgtu@gtu-z
 ```
 
-#basic example.
+# basic example.
 default values set to ic first year
 
 ```py
@@ -24,9 +24,9 @@ await dl.download(urls)
 # will download all the old papers of ic branch.
 ```
 
-you can pass values
+you can pass your own json
 
-here's json example
+# json example
 
 ```json
 {
