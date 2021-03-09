@@ -27,7 +27,8 @@ async def download(urls):
         fin = (end - start)
         le_n = len(urls)
         [print("downloading", i, f"of {le_n}") for i in range(1, le_n+1)]
-        
+        break
+
     info = f'''
     {__logo__}
     Total Files : {le_n} 
