@@ -6,7 +6,7 @@ with open("README.md", "r") as setup:
 
 setuptools.setup(
     name="mygtu",
-    version="0.1.25",
+    version="0.1.30",
     author="g",
     author_email="k",
     description="g",
@@ -17,7 +17,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     # data_files=[('mygtu', ['mygtu/database/*.json'])], 
-    install_requires=['datetime', 'pytz', 'ujson'],
+    install_requires=['datetime', 'pytz', 'ujson', 'aiofiles', 'aiohttp', 'uvloop'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
