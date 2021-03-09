@@ -1,6 +1,8 @@
-# testgtu
+# mygtu
 
-you can use an userbot and run
+`download gtu old papers with async downloader
+ on average you can download 20 pdf of ~250KB in 2 min`
+
 
 ```py
 pip3 install --no-cache git+https://github.com/batatavadaX/testgtu@gtu-z
