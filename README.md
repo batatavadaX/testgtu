@@ -34,16 +34,21 @@ here's json example
 }
 ```
 
-(this examples are for all ready running loops check test.py)
+# example.
 ```py
 from mygtu import dl, mad
-gf = mad(
+import asyncio
+
+async def main():
+    gf = mad(
     path="path/to_json.json", 
     branch="IC", 
     year="FIRST_YEAR",
     course="BE"
     )
-db = gf.database()
-urls = mad.gather_url(db)
-await dl.download(urls)
+    db = gf.database()
+    urls = gf.gather_url(db)
+    await dl.download(urls)
+
+asyncio.run(main())
 ```
