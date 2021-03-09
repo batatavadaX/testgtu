@@ -7,11 +7,9 @@ urls = ['https://www.gtu.ac.in/uploads/S2020/BE/3110006.pdf', 'https://www.gtu.a
 async def downloader(url):
     try:
         async with aiohttp.request("GET", url) as response:
-            return response.status
-            if response.status==200:
-                path = PATH + url.split("/uploads/")[1].replace("/", "-")
-                async with aiofiles.open(path, 'wb') as mad:
-                    await mad.write(await response.read())
+            path = PATH + url.split("/uploads/")[1].replace("/", "-")
+            async with aiofiles.open(path, 'wb') as mad:
+                await mad.write(await response.read())
 
     except Exception:
         print("URL Broken:", url)
