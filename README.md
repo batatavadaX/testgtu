@@ -12,6 +12,8 @@ default values set to ic first year
 from mygtu import dl, gf
 urls = gf.gather_url()
 await dl.download(urls)
+
+# will download all the old papers of ic branch.
 ```
 
 you can pass values
