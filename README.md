@@ -2,9 +2,9 @@
 
 ```text
 download gtu old papers 
-with async downloader
+with async downloade,
 on average you can download 
-20 pdf of ~250KB/each in 2 min
+20 pdf of ~250KB/each in 2 min.
 ```
 
 ```py
