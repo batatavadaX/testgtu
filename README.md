@@ -17,14 +17,19 @@ default values set to ic first year
 
 ```py
 from mygtu import dl, gf
-urls = gf.gather_url()
-await dl.download(urls)
+import asyncio
+
+async def main():
+    urls = gf.gather_url()
+    await dl.download(urls)
+
+asyncio.run(main())
 
 
 # will download all the old papers of ic branch.
 ```
 
-you can pass your own json
+you can pass your own values as json.
 
 # json example
 
