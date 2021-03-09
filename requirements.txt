@@ -3,4 +3,3 @@ pytz
 ujson
 aiohttp
 aiofiles
-uvloop
