@@ -16,6 +16,22 @@ await dl.download(urls)
 
 you can pass values
 
+here's json example
+
+```json
+{
+    "IC":{
+        "FIRST_YEAR":[
+            "3110006",
+            "3110003",
+            "3110005",
+            "3110007",
+            "3110014"
+        ]
+    }
+}
+```
+
 (this examples are for all ready running loops check test.py)
 ```py
 from mygtu import dl, mad
