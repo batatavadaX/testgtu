@@ -7,16 +7,19 @@ on average you can download
 20 pdf of ~250KB/each in 2 min.
 ```
 
+#installation guide.
 ```py
 pip3 install --no-cache git+https://github.com/batatavadaX/testgtu@gtu-z
 ```
 
+#basic example.
 default values set to ic first year
 
 ```py
 from mygtu import dl, gf
 urls = gf.gather_url()
 await dl.download(urls)
+
 
 # will download all the old papers of ic branch.
 ```
