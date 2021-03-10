@@ -9,8 +9,6 @@ from tqdm import tqdm
 urls = gf.gather_url()
 
 def check_path(url):
-    if not os.path.exists(PATH):
-        os.mkdir(PATH)
     if "uploads" in url:
         path = PATH + url.split("/uploads/")[1].replace("/", "-")
     else:
