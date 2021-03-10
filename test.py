@@ -7,17 +7,18 @@ from tqdm import tqdm
 
 urls = gf.gather_url()
 
-async def lol(url):
-  async with aiohttp.request("GET", url) as res:
-    return int(res.headers.get('content-length', 0))
+def check_path(url):
+    if not os.path.exists(PATH):
+        os.mkdir(PATH)
+    if "uploads" in url:
+        path = PATH + url.split("/uploads/")[1].replace("/", "-")
+    else:
+        path = url.split("//")[1].replace("/", "-")
+    return path
 
 async def downloader(url):
     async with aiohttp.request("GET", url) as r:
-        if "uploads" in url:
-            path = PATH + url.split("/uploads/")[1].replace("/", "-")
-        else:
-            path = url.split("//")[1].replace("/", "-")
-        async with aiofiles.open(path, 'wb') as mad:
+        async with aiofiles.open(check_path(url), 'wb') as mad:
           await mad.write(await r.read())
 
 async def main(urls):
