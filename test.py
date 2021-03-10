@@ -15,7 +15,7 @@ def check_path(url):
         path = url.split("//")[1].replace("/", "-")
     return path
 
-async def write(url):
+async def downloader(url):
     async with aiofiles.open(check_path(url), 'wb') as mad:
           await mad.write(await fetch(url))
 
