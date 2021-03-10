@@ -30,8 +30,6 @@ async def main(urls):
         fin = (end - start)
         for i in tqdm(range(100)):
             pass
-        break
-
     print(f"downloaded in [{(le_n * fin)}]")
    
 async def download(urls):
