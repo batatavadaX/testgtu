@@ -1,6 +1,7 @@
 import aiohttp
 import aiofiles
 import asyncio
+import os
 from datetime import datetime
 from mygtu import PATH, gf
 from tqdm import tqdm
