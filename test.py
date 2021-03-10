@@ -15,13 +15,15 @@ def check_path(url):
         path = url.split("//")[1].replace("/", "-")
     return path
 
-async def downloader(url):
+async def write(url):
+    async with aiofiles.open(check_path(url), 'wb') as mad:
+          await mad.write(await fetch(url))
+
+async def fetch(url):
     async with aiohttp.request("GET", url) as r:
-        async with aiofiles.open(check_path(url), 'wb') as mad:
-          await mad.write(await r.read())
+        return await r.read()
 
 async def main(urls):
-    
     for url in urls:
         le_n = len(urls)
         start = datetime.now()
