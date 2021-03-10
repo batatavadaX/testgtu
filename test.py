@@ -2,6 +2,7 @@ import aiohttp
 import aiofiles
 import asyncio
 import os
+import uvloop
 from datetime import datetime
 from mygtu import PATH, gf
 from tqdm import tqdm
@@ -37,4 +38,5 @@ async def main(urls):
 async def download(urls):
     await main((urls))
 
+uvloop.install()
 asyncio.run(download(urls))
