@@ -28,7 +28,7 @@ async def main(urls):
         await downloader(url),
         end = datetime.now()
         fin = (end - start)
-        for i in tqdm(range(100)):
+        for i in tqdm(range(100), unit="KB"):
             pass
     print(f"downloaded in [{(le_n * fin)}]")
    
